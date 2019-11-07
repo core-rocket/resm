@@ -1,5 +1,7 @@
 # RESM
 
+[日本語版READMEはこちら](./README.ja.md)
+
 The RESM file format is a experimental binary format for Rocket Engine description.
 This repository details the specification of RESM.
 
