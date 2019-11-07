@@ -1,0 +1,42 @@
+= RESM Specification
+:author: sksat <sksat@sksat.net>
+:revision: 0.1
+:lang: en
+:toc: left
+:sectnums:
+
+This file documents RESM file format specification.
+
+Copyright (C) 2019 CORE <core.rockets@gmail.com>
+
+== Introduction to RESM Specification
+
+CAUTION: This chapter is not a part of the specification itself.
+
+=== Background
+
+I know there are several file formats for describe Rocket Engine(Motor).
+Most famous file format is RASP(.eng) and RockSim XML format(.rse).
+
+=== Motivation
+
+write later.
+
+== Definition
+
+write later.
+
+== Specification
+
+=== Header
+
+* File Header
+* Flags
+
+=== Specification Part
+
+=== Mesurement Part
+
+* Conditions
+* Logger Information
+* Experiment Log
