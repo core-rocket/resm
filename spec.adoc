@@ -1,6 +1,6 @@
 = RESM Specification
 :author: sksat <sksat@sksat.net>
-:revision: 0.1
+:revision: 0.1.5
 :lang: en
 :toc: left
 :sectnums:
@@ -22,15 +22,20 @@ Most famous file format is RASP(.eng) and RockSim XML format(.rse).
 
 write later.
 
-== Definition
+== Data Representation
 
 write later.
 
-== Specification
+== File Structure
+
+This chapter defines the headers and the properties of parts.
 
 === Header
 
 * File Header
+** File Magic
+File Magic value is always "RESM"
+
 * Flags
 
 === Specification Part
@@ -40,3 +45,48 @@ write later.
 * Conditions
 * Logger Information
 * Experiment Log
+
+== Section Specifications
+
+=== Motor Information
+
+* Type
+* Vendor
+* Name
+* Serial Number
+
+=== Motor Data
+
+* Flag
+* Tank Size
+* Total Inpulse
+* Average Thrust
+* Burn Time
+* Fuel Mass
+* Oxidant Mass
+
+=== Experiment Information
+
+* Organization
+* Experiment Date
+* Angle
+* Air Temperature
+* Air Pressure
+
+=== Logger Information
+
+=== Time Stamp
+=== Parameter Log
+
+== Recommendations for Management
+
+CAUTION: This chapter is not a part of the specification itself.
+
+=== File Name
+
+{VendorName}-{MotorName}-spec.resm
+{VendorName}-{MotorName}-{ExperimentDate}.resm
+
+=== Data Repository
+
+write later.
