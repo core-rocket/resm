@@ -1,6 +1,6 @@
 = RESM Specification
 :author: sksat <sksat@sksat.net>
-:revision: 0.1.5
+:revision: 0.1.6
 :lang: en
 :toc: left
 :sectnums:
@@ -24,7 +24,29 @@ write later.
 
 == Data Representation
 
-write later.
+RESM data structures are mailnly defined using the following types.
+
+=== byte
+
+1byte
+
+=== size
+
+64bit unsigned int
+
+=== int
+
+32bit signed int
+
+=== double
+
+64bit float
+
+IEEE 754 binary64
+
+=== string
+
+UTF-8
 
 == File Structure
 
@@ -50,30 +72,43 @@ File Magic value is always "RESM"
 
 === Motor Information
 
-* Type
-* Vendor
-* Name
-* Serial Number
+* Section Type: byte = 0x01
+* Section Size: size
+* Motor Type
+* Vendor: string
+* Name: string
+* Serial Number: size
 
 === Motor Data
 
+* Section Type: byte = 0x02
+* Section Size: size
 * Flag
-* Tank Size
-* Total Inpulse
-* Average Thrust
-* Burn Time
-* Fuel Mass
-* Oxidant Mass
+* Tank Size: double
+* Total Inpulse: double
+* Average Thrust: double
+* Burn Time: double
+* Fuel Mass: double
+* Oxidant Mass: double
 
 === Experiment Information
 
-* Organization
+* Section Type: byte = 0x03
+* Section Size: size
+* Organization: string
 * Experiment Date
-* Angle
-* Air Temperature
-* Air Pressure
+* Angle: double
+* Air Temperature: double
+* Air Pressure: double
 
 === Logger Information
+
+* Section Type: byte = 0x03
+* Section Size: size
+* Flag
+* Vendor: string
+* Name: string
+* Parameter Type
 
 === Time Stamp
 === Parameter Log
